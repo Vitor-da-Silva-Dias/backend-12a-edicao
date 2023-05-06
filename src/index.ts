@@ -1,58 +1,33 @@
-// // Paradigma IMPERATIVO
-// console.log("Olá mundo!!!!!");
+// import { Animal, Cachorro } from "./animal/animal";
 
-// var nota1: number = 10;
-// var nota2: number = 7;
+import { Aluno, Avaliacao } from "./aluno/aluno";
 
-// var media = (nota1 + nota2) / 2;
+// import { Galinha } from "./animal/galinha";
+// import { TipoAnimal } from "./animal/tipo-animal";
 
-// console.log(media);
+// const cachorro = new Cachorro(1, "Daphne", TipoAnimal.Cachorro, 3, false);
+// // const gato = new Animal(1, "chamin", TipoAnimal.Gato, 3, false);
 
-// // Paradigma PROCEDURAL
-// function calcularMedia(nota1: number, nota2: number) {
-//     return (nota1 + nota2) / 2;
-// }
+// const galinha = new Galinha(2, "MaryLu", 12, 100);
 
-// media = calcularMedia(5, 9);
-// console.log(media);
+// // function lerNomeAnimal(animal: Animal) {
+// //     console.log("O nome do animal é: " + animal.nome);
+// // }
 
-// media = calcularMedia(7, 2);
-// console.log(media);
+// // lerNomeAnimal(cachorro);
+// // lerNomeAnimal(galinha);
 
-// // Paradigma FUNCIONAL
-// // [1, 2, 3, 4]
-// //     .map((item) => {
-// //         console.log(item);
-// //         return item;
-// //     })
-// //     .map((item) => item)
-// //     .filter();
+// // galinha.irParaCeleiro();
 
-// // Paradigma Orientado a Objetos
+// galinha.andar();
+// cachorro.andar();
 
-import { Casa } from "./casa";
+const jose = new Aluno(1, "Jose");
+const av1 = new Avaliacao(2, "front III", 10);
+const av2 = new Avaliacao(3, "backend", 8);
 
-let casa1 = new Casa();
-casa1.cor = "branco";
-casa1.qtdJanelas = 10;
-casa1.janelasAbertas = 0;
-casa1.altura = 50;
+// jose.avaliacoes.push(av1);
+// jose.avaliacoes.push(av2);
 
-let casaDePraia = new Casa();
-casaDePraia.cor = "amarelo";
-casaDePraia.janelasAbertas = 2;
-casaDePraia.qtdJanelas = 10;
-casaDePraia.altura = 20;
-
-// console.log("Qtd de janelas abertas: " + casa1.janelasAbertas);
-
-// casa1.abrirJanela();
-
-// console.log("Qtd de janelas abertas depois do método: " + casa1.janelasAbertas);
-
-// casa1.informarAltura();
-// casaDePraia.informarAltura();
-
-casaDePraia.alterarCor("cinza");
-casa1.alterarCor("cinza");
-console.log(casaDePraia);
+console.log(jose);
+console.log(av1);
