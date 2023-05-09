@@ -2,13 +2,13 @@
 
 import { Aluno, Avaliacao } from "./aluno/aluno";
 
-// import { Galinha } from "./animal/galinha";
+import { Galinha } from "./animal/galinha";
 // import { TipoAnimal } from "./animal/tipo-animal";
 
 // const cachorro = new Cachorro(1, "Daphne", TipoAnimal.Cachorro, 3, false);
-// // const gato = new Animal(1, "chamin", TipoAnimal.Gato, 3, false);
+// const gato = new Animal(1, "chamin", TipoAnimal.Gato, 3, false);
 
-// const galinha = new Galinha(2, "MaryLu", 12, 100);
+const galinha = new Galinha(2, "MaryLu", 12, 100);
 
 // // function lerNomeAnimal(animal: Animal) {
 // //     console.log("O nome do animal é: " + animal.nome);

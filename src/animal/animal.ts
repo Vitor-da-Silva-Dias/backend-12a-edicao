@@ -11,7 +11,7 @@ export abstract class Animal {
 
     informarTipo() {
         switch (this.tipo) {
-            case "C":
+            case TipoAnimal.Gato:
                 console.log("O animal é cachorro");
                 break;
             case "G":
@@ -27,6 +27,7 @@ export abstract class Animal {
 
     andar() {
         console.log("Atenção! animal andando...");
+        this.idade = 20;
     }
 
     abstract falar(): void;
@@ -43,7 +44,12 @@ export class Cachorro extends Animal {
 }
 
 export abstract class Reptil extends Animal {
-    constructor(id: number, nome: string, idade: number, private aquatico: boolean) {
+    constructor(
+        id: number,
+        nome: string,
+        idade: number,
+        private aquatico: boolean
+    ) {
         super(id, nome, TipoAnimal.Reptil, idade, false);
     }
 }
