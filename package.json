@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "ts-node-dev --respawn --transpile-only ./src/frete/index.ts",
+        "dev": "tsnd --respawn --transpile-only --cls src/exercicio",
         "build": "tsc",
         "start": "node ./build/index.js"
     },
