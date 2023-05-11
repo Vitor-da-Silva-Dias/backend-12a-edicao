@@ -1,33 +1,37 @@
-// import { Animal, Cachorro } from "./animal/animal";
-
-import { Aluno, Avaliacao } from "./aluno/aluno";
-
+import { Animal, Jacare } from "./animal/animal";
 import { Galinha } from "./animal/galinha";
-// import { TipoAnimal } from "./animal/tipo-animal";
+import { Zoologico } from "./animal/zoologico";
+import { Cachorro } from "./animal/cachorro";
 
-// const cachorro = new Cachorro(1, "Daphne", TipoAnimal.Cachorro, 3, false);
-// const gato = new Animal(1, "chamin", TipoAnimal.Gato, 3, false);
+const zoo = new Zoologico("Zoologico de POA", "Rua Teste 123");
 
-const galinha = new Galinha(2, "MaryLu", 12, 100);
+const marilu = new Galinha(1, "Marilu", 5, 100);
+const daphne = new Cachorro(2, "Daphne", 3);
+const jacare = new Jacare(3, "Josecaré", 20, true);
 
-// // function lerNomeAnimal(animal: Animal) {
-// //     console.log("O nome do animal é: " + animal.nome);
-// // }
+zoo.addAnimal(marilu);
+zoo.addAnimal(daphne);
+zoo.addAnimal(jacare);
 
-// // lerNomeAnimal(cachorro);
-// // lerNomeAnimal(galinha);
+const animaisQueVoam = zoo.animais
+    .filter((animal) => !animal.podeVoar)
+    .map((animal) => {
+        return {
+            nome: animal.nome,
+            idade: animal.idade,
+        };
+    })
+    .reduce((initial, current) => {
+        return initial + current.idade;
+    }, 0);
 
-// // galinha.irParaCeleiro();
+let algum = zoo.animais.some((item) => {
+    return item.idade > 10;
+});
 
-// galinha.andar();
-// cachorro.andar();
+zoo.animais.forEach((item) => {
+    // console.log(item);
+    item.idade += 1;
+});
 
-const jose = new Aluno(1, "Jose");
-const av1 = new Avaliacao(2, "front III", 10);
-const av2 = new Avaliacao(3, "backend", 8);
-
-// jose.avaliacoes.push(av1);
-// jose.avaliacoes.push(av2);
-
-console.log(jose);
-console.log(av1);
+console.log(zoo.animais);

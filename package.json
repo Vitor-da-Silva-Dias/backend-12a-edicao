@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "tsnd --respawn --transpile-only --cls src/exercicio",
+        "dev": "tsnd --respawn --transpile-only --cls ./src/exercicio-alunos/index.ts",
         "build": "tsc",
         "start": "node ./build/index.js"
     },

@@ -2,12 +2,16 @@ import { TipoAnimal } from "./tipo-animal";
 
 export abstract class Animal {
     constructor(
-        protected id: number,
+        protected _id: number,
         public nome: string,
         public tipo: TipoAnimal,
         public idade: number,
         public podeVoar?: boolean
     ) {}
+
+    public get id() {
+        return this._id;
+    }
 
     informarTipo() {
         switch (this.tipo) {
@@ -31,16 +35,6 @@ export abstract class Animal {
     }
 
     abstract falar(): void;
-}
-
-export class Cachorro extends Animal {
-    andar() {
-        console.log("Andando como um cachorro...");
-    }
-
-    falar(): void {
-        console.log("Au au au");
-    }
 }
 
 export abstract class Reptil extends Animal {
