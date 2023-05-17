@@ -1,0 +1,16 @@
+npm init -y
+npm i -D typescript @types/node ts-node-dev
+npx tsc --init
+alterar a linha 14 do tsconfig para "es2022"
+alterar a linha 29 do tsconfig para "./src"
+alterar a linha 58 do tsconfig para "./build"
+alterar a linha 90 do tsconfig para false
+acrescentar ao final do tsconfig, antes da última chave, os seguintes comandos:
+ "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules"]
+  acrescentar no package.json, a partir da linha 6, as seguintes linhas:
+   "scripts": {
+        "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+        "build": "tsc",
+        "start": "node ./build/index.js"
+    },
